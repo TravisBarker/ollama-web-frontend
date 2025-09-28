@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ollama Web UI (Local)</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h1>Ollama UI</h1>
+      <label>Model
+        <select id="model"></select>
+      </label>
+      <label>Temperature
+        <input id="temperature" type="number" step="0.1" min="0" max="2" value="0.2" />
+      </label>
+      <label>System Prompt (optional)
+        <textarea id="system" rows="6" placeholder="You are a concise, pragmatic assistant..."></textarea>
+      </label>
+      <button id="clear">Clear Chat</button>
+      <div class="status" id="status">Ready</div>
+    </aside>
+
+    <main class="chat">
+      <div id="messages" class="messages"></div>
+      <form id="composer" class="composer">
+        <textarea id="input" rows="3" placeholder="Type your message (Shift+Enter = newline)"></textarea>
+        <button id="send" type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

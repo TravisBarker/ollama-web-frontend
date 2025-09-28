@@ -15,7 +15,17 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI
 .msg.user { background: #1b2735; }
 .msg.assistant { background: #121a23; }
 .msg .role { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-
+pre { background:#0b1117; padding:12px; border-radius:10px; overflow:auto; }
+code { background:#0b1117; padding:2px 4px; border-radius:6px; }
+a { color:#7aa2f7; }
 .composer { display: grid; grid-template-columns: 1fr 120px; gap: 10px; padding: 12px; border-top: 1px solid #222; }
 .composer textarea { width: 100%; resize: vertical; padding: 10px; border-radius: 10px; border: 1px solid #333; background: #0f141a; color: var(--fg); }
 .composer button { border: 0; border-radius: 10px; background: var(--accent); color: #0b1020; font-weight: 800; cursor: pointer; }
+.sidebar h2 { font-size: 14px; margin: 8px 0 6px; color: var(--muted); }
+.chat-controls button { width: 100%; padding: 8px; border: 0; border-radius: 10px; background: #1f2a44; color: #cbd5e1; cursor: pointer; }
+.chat-list { list-style: none; padding: 0; margin: 8px 0; }
+.chat-list li { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 8px; border: 1px solid #333; border-radius: 10px; margin-bottom: 6px; background: #0f141a; cursor: pointer; }
+.chat-list li.active { outline: 2px solid var(--accent); }
+.chat-list .title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chat-list .actions button { background: #202733; color: #cbd5e1; border: 0; border-radius: 8px; padding: 4px 6px; margin-left: 4px; cursor: pointer; }
+

@@ -10,15 +10,28 @@
   <div id="app">
     <aside class="sidebar">
       <h1>Ollama UI</h1>
+
+      <!-- Chats sidebar -->
+      <h2>Chats</h2>
+      <div class="chat-controls">
+        <button id="newChat">+ New Chat</button>
+      </div>
+      <ul id="chatList" class="chat-list"></ul>
+      <hr/>
+
+      <!-- Controls -->
       <label>Model
         <select id="model"></select>
       </label>
+
       <label>Temperature
         <input id="temperature" type="number" step="0.1" min="0" max="2" value="0.2" />
       </label>
+
       <label>System Prompt (optional)
         <textarea id="system" rows="6" placeholder="You are a concise, pragmatic assistant..."></textarea>
       </label>
+
       <button id="clear">Clear Chat</button>
       <div class="status" id="status">Ready</div>
     </aside>
@@ -28,9 +41,13 @@
       <form id="composer" class="composer">
         <textarea id="input" rows="3" placeholder="Type your message (Shift+Enter = newline)"></textarea>
         <button id="send" type="submit">Send</button>
+        <button id="stop" type="button">Stop</button>
       </form>
     </main>
   </div>
-  <script src="/static/app.js"></script>
+
+  <!-- bump to bust cache -->
+  <script src="/static/app.js?v=14"></script>
 </body>
 </html>
+
